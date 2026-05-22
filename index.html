@@ -17,14 +17,18 @@
 
 body{
     font-family:'Poppins', sans-serif;
-    background:#0f0f0f;
+    background:#0b0b0b;
     color:white;
 }
 
+/* FUNDO MÍSTICO */
 header{
     min-height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
-    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.88)),
+    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop');
+
     background-size:cover;
     background-position:center;
     display:flex;
@@ -37,13 +41,16 @@ header{
 .hero h1{
     font-size:4rem;
     margin-bottom:20px;
+    color:#f5d7a1;
+    text-shadow:0 0 20px rgba(255,200,120,0.4);
 }
 
 .hero p{
     font-size:1.2rem;
     max-width:700px;
     margin:auto;
-    opacity:0.9;
+    opacity:0.95;
+    line-height:1.8;
 }
 
 .hero button{
@@ -51,16 +58,17 @@ header{
     padding:15px 35px;
     border:none;
     border-radius:40px;
-    background:#d4a373;
+    background:#b47b52;
     color:white;
     font-size:1rem;
     cursor:pointer;
     transition:0.3s;
+    box-shadow:0 0 25px rgba(180,123,82,0.4);
 }
 
 .hero button:hover{
     transform:scale(1.05);
-    background:#bc8a5f;
+    background:#8f5e3c;
 }
 
 section{
@@ -69,22 +77,24 @@ section{
 
 .title{
     text-align:center;
-    font-size:2.5rem;
+    font-size:2.7rem;
     margin-bottom:50px;
+    color:#f5d7a1;
 }
 
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    gap:35px;
 }
 
 .card{
-    background:#1a1a1a;
+    background:#161616;
     border-radius:25px;
     overflow:hidden;
     transition:0.3s;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
@@ -103,28 +113,30 @@ section{
 
 .card-content h3{
     margin-bottom:10px;
-    font-size:1.3rem;
+    font-size:1.4rem;
+    color:#f5d7a1;
 }
 
 .card-content p{
     opacity:0.8;
     font-size:0.95rem;
     margin-bottom:20px;
+    line-height:1.7;
 }
 
 .price{
-    font-size:1.3rem;
+    font-size:1.4rem;
     font-weight:700;
-    color:#d4a373;
+    color:#d6a77a;
     margin-bottom:20px;
 }
 
 .buy-btn{
     width:100%;
-    padding:12px;
+    padding:13px;
     border:none;
     border-radius:15px;
-    background:#d4a373;
+    background:#b47b52;
     color:white;
     font-size:1rem;
     cursor:pointer;
@@ -132,22 +144,32 @@ section{
 }
 
 .buy-btn:hover{
-    background:#bc8a5f;
+    background:#8f5e3c;
 }
 
 .about{
-    background:#151515;
+    background:#131313;
     border-radius:30px;
-    line-height:1.8;
+    line-height:1.9;
     text-align:center;
     padding:60px;
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    opacity:0.9;
+    font-size:1.05rem;
 }
 
 footer{
     text-align:center;
-    padding:30px;
-    background:#090909;
+    padding:35px;
+    background:#070707;
     opacity:0.7;
+    border-top:1px solid rgba(255,255,255,0.05);
 }
 
 .whatsapp{
@@ -168,101 +190,149 @@ footer{
 }
 
 @media(max-width:768px){
+
     .hero h1{
-        font-size:2.5rem;
+        font-size:2.6rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .title{
+        font-size:2rem;
+    }
+
+    .about{
+        padding:35px;
     }
 }
 </style>
 </head>
+
 <body>
 
 <header>
     <div class="hero">
+
         <h1>Essência Natural</h1>
 
         <p>
-            Produtos artesanais de bem-estar, conexão e autocuidado.
-            Qualidade, natureza e equilíbrio em cada detalhe.
+            Produtos artesanais inspirados na natureza,
+            conexão, autocuidado e experiências únicas.
         </p>
 
         <button onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">
             Ver Produtos
         </button>
+
     </div>
 </header>
 
 <section>
+
     <div class="about">
-        <h2 class="title">Sobre Nós</h2>
+
+        <h2 class="title">
+            Sobre Nós
+        </h2>
 
         <p>
-            Criamos produtos inspirados na natureza, no bem-estar e na conexão.
-            Nossa missão é proporcionar experiências únicas com qualidade,
-            cuidado e autenticidade.
+            A Essência Natural nasceu da conexão entre natureza,
+            bem-estar e experiências sensoriais únicas.
+            Criamos produtos artesanais com cuidado,
+            autenticidade e qualidade premium.
         </p>
+
     </div>
+
 </section>
 
 <section id="produtos">
-    <h2 class="title">Produtos</h2>
+
+    <h2 class="title">
+        Produtos
+    </h2>
 
     <div class="products">
 
         <div class="card">
+
             <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop">
 
             <div class="card-content">
+
                 <h3>Cacau Artesanal</h3>
 
                 <p>
-                    Blend premium para momentos especiais e rituais de conexão.
+                    Blend premium para rituais, conexão
+                    e momentos especiais.
                 </p>
 
-                <div class="price">R$ 49,90</div>
+                <div class="price">
+                    R$ 49,90
+                </div>
 
                 <button class="buy-btn">
                     Comprar
                 </button>
+
             </div>
+
         </div>
 
         <div class="card">
+
             <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop">
 
             <div class="card-content">
+
                 <h3>Mel Artesanal</h3>
 
                 <p>
-                    Mel puro selecionado, produzido de forma natural.
+                    Mel puro selecionado com produção natural
+                    e sabor intenso.
                 </p>
 
-                <div class="price">R$ 39,90</div>
+                <div class="price">
+                    R$ 39,90
+                </div>
 
                 <button class="buy-btn">
                     Comprar
                 </button>
+
             </div>
+
         </div>
 
         <div class="card">
+
             <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop">
 
             <div class="card-content">
+
                 <h3>Kit Relaxamento</h3>
 
                 <p>
-                    Experiência completa para desacelerar e renovar as energias.
+                    Experiência completa para desacelerar
+                    e renovar as energias.
                 </p>
 
-                <div class="price">R$ 89,90</div>
+                <div class="price">
+                    R$ 89,90
+                </div>
 
                 <button class="buy-btn">
                     Comprar
                 </button>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 <footer>
