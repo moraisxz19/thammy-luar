@@ -17,17 +17,17 @@
 
 body{
     font-family:'Poppins', sans-serif;
-    background:#0b0b0b;
+    background:#0a0a0a;
     color:white;
 }
 
-/* FUNDO MÍSTICO */
+/* FUNDO MÍSTICO FLORESTA/COGUMELOS */
 header{
     min-height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.88)),
-    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop');
+    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.88)),
+    url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1600&auto=format&fit=crop');
 
     background-size:cover;
     background-position:center;
@@ -42,12 +42,12 @@ header{
     font-size:4rem;
     margin-bottom:20px;
     color:#f5d7a1;
-    text-shadow:0 0 20px rgba(255,200,120,0.4);
+    text-shadow:0 0 25px rgba(255,190,110,0.5);
 }
 
 .hero p{
     font-size:1.2rem;
-    max-width:700px;
+    max-width:750px;
     margin:auto;
     opacity:0.95;
     line-height:1.8;
@@ -82,14 +82,31 @@ section{
     color:#f5d7a1;
 }
 
+.about{
+    background:#141414;
+    border-radius:30px;
+    padding:60px;
+    text-align:center;
+    line-height:1.9;
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    opacity:0.9;
+    font-size:1.05rem;
+}
+
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:35px;
 }
 
 .card{
-    background:#161616;
+    background:#151515;
     border-radius:25px;
     overflow:hidden;
     transition:0.3s;
@@ -120,8 +137,8 @@ section{
 .card-content p{
     opacity:0.8;
     font-size:0.95rem;
-    margin-bottom:20px;
     line-height:1.7;
+    margin-bottom:20px;
 }
 
 .price{
@@ -145,23 +162,6 @@ section{
 
 .buy-btn:hover{
     background:#8f5e3c;
-}
-
-.about{
-    background:#131313;
-    border-radius:30px;
-    line-height:1.9;
-    text-align:center;
-    padding:60px;
-    border:1px solid rgba(255,255,255,0.05);
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-.about p{
-    max-width:900px;
-    margin:auto;
-    opacity:0.9;
-    font-size:1.05rem;
 }
 
 footer{
@@ -192,7 +192,7 @@ footer{
 @media(max-width:768px){
 
     .hero h1{
-        font-size:2.6rem;
+        font-size:2.7rem;
     }
 
     .hero p{
@@ -213,13 +213,14 @@ footer{
 <body>
 
 <header>
+
     <div class="hero">
 
         <h1>Essência Natural</h1>
 
         <p>
             Produtos artesanais inspirados na natureza,
-            conexão, autocuidado e experiências únicas.
+            na conexão e em experiências sensoriais únicas.
         </p>
 
         <button onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">
@@ -227,6 +228,7 @@ footer{
         </button>
 
     </div>
+
 </header>
 
 <section>
@@ -238,10 +240,11 @@ footer{
         </h2>
 
         <p>
-            A Essência Natural nasceu da conexão entre natureza,
-            bem-estar e experiências sensoriais únicas.
-            Criamos produtos artesanais com cuidado,
-            autenticidade e qualidade premium.
+            A Essência Natural nasceu da união entre natureza,
+            autocuidado e experiências especiais.
+            Trabalhamos com produtos artesanais premium,
+            selecionados para proporcionar conexão,
+            equilíbrio e bem-estar.
         </p>
 
     </div>
@@ -265,8 +268,8 @@ footer{
                 <h3>Cacau Artesanal</h3>
 
                 <p>
-                    Blend premium para rituais, conexão
-                    e momentos especiais.
+                    Blend premium para rituais,
+                    conexão e momentos especiais.
                 </p>
 
                 <div class="price">
@@ -290,8 +293,8 @@ footer{
                 <h3>Mel Artesanal</h3>
 
                 <p>
-                    Mel puro selecionado com produção natural
-                    e sabor intenso.
+                    Mel puro selecionado,
+                    produzido de forma natural.
                 </p>
 
                 <div class="price">
